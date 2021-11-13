@@ -129,6 +129,7 @@ class AddressBookServiceTest {
         assertEquals(maria.name, mariaUpdated?.name)
         assertEquals(3, mariaUpdated?.id)
         assertEquals(mariaURI, mariaUpdated?.href)
+        
         //////////////////////////////////////////////////////////////////////
         // Verify that GET /contacts/person/3 is well implemented by the service, i.e
         // complete the test to ensure that it is safe and idempotent
@@ -181,7 +182,7 @@ class AddressBookServiceTest {
         val juanURI = URI.create("http://localhost:$port/contacts/person/2")
         addressBook.personList.add(salvador)
         addressBook.personList.add(juan)
-        
+
         val addressBookBefore: AddressBook = addressBook.copy()
         
         // Update Maria
