@@ -35,6 +35,13 @@ class AddressBook {
         nextId = 1
         personList = mutableListOf()
     }
+
+    fun copy(): AddressBook {
+        var addressBookCopy: AddressBook = AddressBook()
+        addressBookCopy.nextId = this.nextId
+        addressBookCopy.personList = this.personList
+        return addressBookCopy
+    }
 }
 
 data class Person(
