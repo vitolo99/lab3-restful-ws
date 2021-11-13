@@ -39,7 +39,7 @@ class AddressBook {
     fun copy(): AddressBook {
         var addressBookCopy: AddressBook = AddressBook()
         addressBookCopy.nextId = this.nextId
-        addressBookCopy.personList = this.personList
+        addressBookCopy.personList.addAll(this.personList)
         return addressBookCopy
     }
 }
